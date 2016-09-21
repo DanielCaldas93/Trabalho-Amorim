@@ -43,3 +43,8 @@ group :development, :test do
   gem 'spring'
 end
 
+#Minhas Gems
+gem 'bootstrap-sass'
+gem 'bootstrap-datepicker-rails'
+gem 'jquery-inputmask-rails'
+gem 'carrierwave'

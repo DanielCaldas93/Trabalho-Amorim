@@ -7,16 +7,32 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render "layouts/navbar" %>
+<!--<%= image_tag 'logo.jpg', class: 'logo'%>->>
 
-<%= image_tag 'logo.jpg', class: 'logo'%>
-
-<h1>Lambiscaria</h1>
-
+<!--
 <hr/>
 <%= link_to 'Empresa', paginas_index_path %>
 <%= link_to 'Localização', paginas_localizacao_path %>
 <%= link_to 'Clientes', clientes_path %>
 <hr/>
+-->
+<!--
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">	
+				<%= render "layouts/latbar" %>
+			</div>
+			<div class="col-md-9">
+				<div class="panel-body">
+					<%= yield %>	
+					<p class="notice"><%= notice %></p>
+					<p class="alert"><%= alert %></p>
+				</div>
+			</div>
+		</div> <-- row ->
+	</div> <-- container ->
+-->
 
 <%= yield %>
 
