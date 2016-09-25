@@ -4,7 +4,18 @@ class ClientesController < ApplicationController
   # GET /clientes
   # GET /clientes.json
   def index
-    @clientes = Cliente.all
+    #@clientes = Cliente.all 
+    @pnome = params[:pnome]
+    @pcpf = params[:pcpf]
+
+    filtro = "1=1"
+    if @pnome.present?
+      filtro = filtro + " and nome like '%#{@pnome}%'"
+    end
+    if @pcpf.present?
+      filtro = filtro + " and cpf like '%#{@pcpf}%'"
+    end
+    @clientes = Cliente.where(filtro).order("nome");
   end
 
   # GET /clientes/1
